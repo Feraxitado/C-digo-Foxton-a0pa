@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Código Vendedor - Foxton</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    .container {
+      max-width: 480px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .codigo {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 16px 0;
+    }
+    button {
+      background: black;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .info {
+      margin-top: 24px;
+      font-size: 15px;
+      color: #333;
+    }
+    .cupom {
+      margin-top: 12px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">🖤 Foxton</div>
+    <div>Código de Vendedor</div>
+    <div class="codigo" id="codigo">a0pa</div>
+    <button onclick="copiarCodigo()">Clique para Copiar</button>
+    <div class="info">
+      Use o código <strong>a0pa</strong> no campo “<strong>Código Vendedor</strong>” antes de finalizar suas compras no site e ganhe <strong>descontos + frete grátis</strong>.
+      <div class="cupom">Primeira compra? Use <strong>BEMVINDO25</strong> para 25% OFF</div>
+    </div>
+  </div>
+
+  <script>
+    function copiarCodigo() {
+      const codigo = document.getElementById('codigo').textContent;
+      navigator.clipboard.writeText(codigo);
+      alert('Código copiado: ' + codigo);
+    }
+  </script>
+</body>
+</html>
